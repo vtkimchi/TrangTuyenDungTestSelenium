@@ -85,11 +85,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExcelLib.cs" />
+    <Compile Include="PB12_SearchRecruitmentNews.cs" />
     <Compile Include="POM\LoginPageObject.cs" />
     <Compile Include="POM\LSPageObject.cs" />
     <Compile Include="PB01_CreatStaffAccount.cs" />
     <Compile Include="PB05_Login.cs" />
     <Compile Include="PB11_ViewRecruitmentNewsDetail.cs" />
+    <Compile Include="POM\SearchRNPageObject.cs" />
     <Compile Include="POM\ViewDetailPageObject.cs" />
     <Compile Include="Support\PropertiesCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

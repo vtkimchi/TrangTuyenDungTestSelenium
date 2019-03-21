@@ -25,10 +25,10 @@ namespace TrangTuyenDung.UITests.Selenium
             PropertiesCollection.driver = new FirefoxDriver();
             
             //PropertiesCollection.driver.Navigate().GoToUrl("http://localhost:49925/Account/Login");
-            PropertiesCollection.driver.Navigate().GoToUrl("http://cntttest.vanlanguni.edu.vn:18080/EJob/Account/Login");
+            PropertiesCollection.driver.Navigate().GoToUrl("http://cntttest.vanlanguni.edu.vn:18080/EJob/");
 
             // Read file test data
-            ExcelLib.PopulateInCollection("/TestData.xlsx", "Sheet1");
+            ExcelLib.PopulateInCollection("D:/K21T2-CAP/Project/Source code/TrangTuyenDung.UITests.Selenium/TestData.xlsx", "PB05_Login");
         }
 
         [Test]
@@ -66,8 +66,8 @@ namespace TrangTuyenDung.UITests.Selenium
 
             // Login to application
             loginPage.FileLoginForm(ExcelLib.ReadData(2, "Email"), ExcelLib.ReadData(2, "Password"));
-
             Thread.Sleep(4000);
+
             // go to the next page
             LSPageObject successPage = new LSPageObject();
 
@@ -89,8 +89,8 @@ namespace TrangTuyenDung.UITests.Selenium
 
             // Login to application
             loginPage.FileLoginForm(ExcelLib.ReadData(3, "Email"), ExcelLib.ReadData(3, "Password"));
-
             Thread.Sleep(4000);
+
             // go to the next page
             LSPageObject successPage = new LSPageObject();
 

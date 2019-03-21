@@ -29,7 +29,7 @@ namespace TrangTuyenDung.UITests.Selenium
             LoginPageObject loginPage = new LoginPageObject();
             Thread.Sleep(4000);
 
-            // Read file test data
+            // Read file test data for login
             ExcelLib.PopulateInCollection("D:/K21T2-CAP/Project/Source code/TrangTuyenDung.UITests.Selenium/TestData.xlsx", "PB05_Login");
 
             // Login to application
@@ -37,6 +37,7 @@ namespace TrangTuyenDung.UITests.Selenium
 
             Thread.Sleep(4000);
 
+            // create LS page object
             LSPageObject successPage = new LSPageObject();
 
             Thread.Sleep(4000);
@@ -44,9 +45,11 @@ namespace TrangTuyenDung.UITests.Selenium
             // Read file test data
             ExcelLib.PopulateInCollection("D:/K21T2-CAP/Project/Source code/TrangTuyenDung.UITests.Selenium/TestData.xlsx", "PB01_CreateStaffAccount");
 
+            // create staff account to application
             successPage.LoginSuccessWithAdminAccount(ExcelLib.ReadData(1, "Email Created"), ExcelLib.ReadData(1, "Password Created"));
             Thread.Sleep(4000);
 
+            // expected result
             var expectedResult = "Index";
 
             Assert.AreEqual(expectedResult.ToLower(), successPage.CreateSuccessful().ToLower());

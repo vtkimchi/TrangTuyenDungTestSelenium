@@ -26,14 +26,16 @@ namespace TrangTuyenDung.UITests.Selenium
         [Test]
         public void ViewRecruitmentDetail_WithViewSuccessful()
         {
+            // scroll home page to 700 px
             IJavaScriptExecutor je = (IJavaScriptExecutor)PropertiesCollection.driver;
             je.ExecuteScript("window.scrollBy(0,700)");
 
             Thread.Sleep(4000);
 
+            // create view detail page object
             ViewDetailPageObject vdpo = new ViewDetailPageObject();
-
             vdpo.clickTitle();
+
             // expected result
             var expectedResult = "Ứng tuyển";
 
