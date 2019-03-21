@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace TrangTuyenDung.UITests.Selenium
 {
-    class Program
+    class PB05_Login
     {
 
         static void Main(string[] args)
@@ -28,7 +28,7 @@ namespace TrangTuyenDung.UITests.Selenium
             PropertiesCollection.driver.Navigate().GoToUrl("http://cntttest.vanlanguni.edu.vn:18080/EJob/Account/Login");
 
             // Read file test data
-            ExcelLib.PopulateInCollection("/TestData.xlsx");
+            ExcelLib.PopulateInCollection("/TestData.xlsx", "Sheet1");
         }
 
         [Test]
